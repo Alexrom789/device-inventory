@@ -9,10 +9,10 @@ import (
 	"github.com/gofiber/fiber/v2/middleware/recover"
 	"github.com/joho/godotenv"
 
-	"github.com/yourusername/device-inventory/config"
-	"github.com/yourusername/device-inventory/internal/handlers"
-	"github.com/yourusername/device-inventory/internal/repository"
-	"github.com/yourusername/device-inventory/internal/service"
+	"github.com/alexrom789/device-inventory/config"
+	"github.com/alexrom789/device-inventory/internal/handlers"
+	"github.com/alexrom789/device-inventory/internal/repository"
+	"github.com/alexrom789/device-inventory/internal/service"
 )
 
 func main() {

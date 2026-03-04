@@ -6,7 +6,7 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"
-	"github.com/yourusername/device-inventory/internal/models"
+	"github.com/alexrom789/device-inventory/internal/models"
 )
 
 // DeviceRepository defines the interface (contract) for all database

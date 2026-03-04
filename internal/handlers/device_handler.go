@@ -2,8 +2,8 @@ package handlers
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/yourusername/device-inventory/internal/models"
-	"github.com/yourusername/device-inventory/internal/service"
+	"github.com/alexrom789/device-inventory/internal/models"
+	"github.com/alexrom789/device-inventory/internal/service"
 )
 
 // DeviceHandler holds a reference to the service layer.

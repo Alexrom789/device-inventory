@@ -5,8 +5,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/yourusername/device-inventory/internal/models"
-	"github.com/yourusername/device-inventory/internal/repository"
+	"github.com/alexrom789/device-inventory/internal/models"
+	"github.com/alexrom789/device-inventory/internal/repository"
 )
 
 // DeviceService contains the business logic for the inventory system.

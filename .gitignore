@@ -1,0 +1,22 @@
+# Environment variables — NEVER commit this
+.env
+
+# Go build output
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/bin/
+
+# Go test cache
+*.test
+*.out
+
+# Go module download cache
+vendor/
+
+# IDE files
+.vscode/
+.idea/
+*.swp

@@ -56,6 +56,9 @@ func main() {
 		})
 	})
 
+    // Serve UI
+	app.Static("/", "./static")
+
 	// 6. Register device routes
 	deviceHandler.RegisterRoutes(app)
 

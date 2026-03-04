@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Device Inventory</title>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+
+<header>
+  <h1>📦 Device Inventory</h1>
+  <span class="badge" id="status-dot">● LIVE</span>
+</header>
+
+<div class="layout">
+
+  <!-- Left Panel: Actions -->
+  <div class="panel">
+
+    <!-- Add Device -->
+    <div>
+      <div class="section-title">Add Device</div>
+      <label>IMEI</label>
+      <input id="imei" type="text" placeholder="e.g. 123456789012345" maxlength="15"/>
+      <label>Model</label>
+      <input id="model" type="text" placeholder="e.g. iPhone 13 Pro"/>
+      <label>Price ($)</label>
+      <input id="price" type="number" placeholder="e.g. 499.99" step="0.01"/>
+      <button class="btn-primary" onclick="createDevice()">+ Add Device</button>
+    </div>
+
+    <hr/>
+
+    <!-- Update Status -->
+    <div>
+      <div class="section-title">Update Status</div>
+      <label>Device ID</label>
+      <input id="status-id" type="text" placeholder="Paste device ID"/>
+      <label>New Status</label>
+      <select id="new-status">
+        <option value="received">Received</option>
+        <option value="testing">Testing</option>
+        <option value="graded">Graded</option>
+        <option value="sold">Sold</option>
+      </select>
+      <button class="btn-warning" onclick="updateStatus()">Update Status</button>
+    </div>
+
+    <hr/>
+
+    <!-- Process Device -->
+    <div>
+      <div class="section-title">Process Device (Async Grading)</div>
+      <p style="font-size:0.78rem; color:#64748b; margin-bottom:10px;">
+        Launches a goroutine to simulate warehouse testing. Takes 1–3 seconds.
+      </p>
+      <label>Device ID</label>
+      <input id="process-id" type="text" placeholder="Paste device ID"/>
+      <button class="btn-purple" onclick="processDevice()">⚡ Run Grading</button>
+    </div>
+
+    <hr/>
+
+    <!-- Lookup -->
+    <div>
+      <div class="section-title">Lookup Device</div>
+      <label>Device ID</label>
+      <input id="lookup-id" type="text" placeholder="Paste device ID"/>
+      <button class="btn-secondary" onclick="lookupDevice()">Search</button>
+    </div>
+
+  </div>
+
+  <!-- Right Panel: Device Table -->
+  <div class="main">
+    <div class="toolbar">
+      <h2>Inventory <span id="device-count" style="color:#64748b; font-weight:400;"></span></h2>
+      <button id="refresh-btn" onclick="loadDevices()">↻ Refresh</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>IMEI</th>
+            <th>Model</th>
+            <th>Status</th>
+            <th>Grade</th>
+            <th>Price</th>
+            <th>Updated</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="device-table-body">
+          <tr><td colspan="8" class="empty-state">Loading devices...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

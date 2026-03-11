@@ -73,7 +73,7 @@ device-inventory/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/device-inventory.git
+git clone https://github.com/alexrom789/device-inventory.git
 cd device-inventory
 ```
 

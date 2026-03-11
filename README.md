@@ -190,3 +190,6 @@ case <-time.After(10 * time.Second):
 ```
 
 This pattern is idiomatic Go and maps directly to real-world use cases like async job processing, webhook delivery, and background workers.
+
+UI SAMPLE:
+<img width="2021" height="1324" alt="GoAppUI" src="https://github.com/user-attachments/assets/d4b043c1-f61f-4521-935f-5af455f0a9af" />
